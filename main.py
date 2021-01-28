@@ -32,7 +32,7 @@ index = torch.where(D!=0)[0]
 adj[index, :] = adj[index, :] / D[index]
 adj = torch.eye(adj.shape[0]) + adj
 
-bound=27
+bound=270*5
 for i in range(10):
     optimizer.zero_grad()
     pre = net(features, adj)
